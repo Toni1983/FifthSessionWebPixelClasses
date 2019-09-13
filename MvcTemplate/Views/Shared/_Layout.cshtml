@@ -1,0 +1,70 @@
+﻿@{ 
+    string ControllerName = ViewContext.RouteData.Values["controller"].ToString();
+    string actionName = ViewContext.RouteData.Values["action"].ToString();
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Moderna - Bootstrap 3 flat corporate template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <!-- css -->
+    <link href="/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="/Content/css/jcarousel.css" rel="stylesheet" />
+    <link href="/Content/css/flexslider.css" rel="stylesheet" />
+    <link href="/Content/css/style.css" rel="stylesheet" />
+
+    <!-- Theme skin -->
+    <link href="/Content/skins/default.css" rel="stylesheet" />
+
+    <!-- =======================================================
+    Theme Name: Moderna
+    Theme URL: https://bootstrapmade.com/free-bootstrap-template-corporate-/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+    ======================================================= -->
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- start header -->
+        @Html.Partial("_Header")
+        <!-- end header -->
+        @Html.Partial("_Slider")
+        @if (ControllerName == "Home" && actionName == "Index")
+        {
+            @Html.Partial("_Slider")
+        }
+        else
+        {
+            @Html.Partial("_OtherSlider")
+        }
+        @Html.Partial("_TopText")
+        @RenderBody()
+        
+        @Html.Partial("_Footer")
+    </div>
+    <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+    <!-- javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/Scripts/js/jquery.js"></script>
+    <script src="/Scripts/js/jquery.easing.1.3.js"></script>
+    <script src="/Scripts/js/bootstrap.min.js"></script>
+    <script src="/Scripts/js/jquery.fancybox.pack.js"></script>
+    <script src="/Scripts/js/jquery.fancybox-media.js"></script>
+    <script src="/Scripts/js/google-code-prettify/prettify.js"></script>
+    <script src="/Scripts/js/portfolio/jquery.quicksand.js"></script>
+    <script src="/Scripts/js/portfolio/setting.js"></script>
+    <script src="/Scripts/js/jquery.flexslider.js"></script>
+    <script src="/Scripts/js/animate.js"></script>
+    <script src="/Scripts/js/custom.js"></script>
+
+</body>
+
+</html>

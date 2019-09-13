@@ -1,0 +1,53 @@
+﻿.dvMain {
+    position: relative;
+    width: 100%;
+    height: 950px;
+    background-color: cornflowerblue;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: darkgoldenrod
+}
+
+aside {
+    position: absolute;
+    width: 15%;
+    background-color: yellowgreen;
+}
+.leftSideBar {
+    top: 100px;
+    height: 750px;
+}
+.rightSideBar{
+    top:350px;
+    height:500px;
+    left:85%;
+    background-color:darkblue;
+}
+#content {
+    position: absolute;
+    width: 70%;
+    height: 350px;
+    background-color: white;
+    top: 350px;
+    left: 15%;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: rebeccapurple;
+    bottom: 0px;
+}
+
+.slider {
+    position: absolute;
+    width: 85%;
+    height: 250px;
+    background-color:lightgreen;
+    top:100px;
+    left:15%;
+}

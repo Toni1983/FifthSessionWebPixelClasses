@@ -9,3 +9,35 @@ table {
     background: aquamarine;
     float: left;
 }
+.header{
+    margin: 20px auto;
+    text-align: center;
+}
+.header1{
+    padding: 10px 0;
+}
+.icons{
+    background: #F44336;
+    margin: 30px auto;
+}
+.fa{
+    margin:5px 10px;
+    font-size: 25px !important;
+    cursor: pointer;
+    color: #fff;
+}
+.fa:hover{
+    color: #000000;
+    transition: .4s;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+#column1,#column2, #column3, #column4{
+    width: 25%;
+}
+img{
+    width: 98%;
+    padding: 1%;
+}

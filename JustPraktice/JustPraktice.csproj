@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="StyleSheet.css" />
+    <Content Include="TestingGridView.aspx" />
     <Content Include="TestingListView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -84,6 +85,13 @@
       <DependentUpon>Masterpage.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestingGridView.aspx.cs">
+      <DependentUpon>TestingGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestingGridView.aspx.designer.cs">
+      <DependentUpon>TestingGridView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TestingListView.aspx.cs">
       <DependentUpon>TestingListView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

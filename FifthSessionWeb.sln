@@ -25,10 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBlog", "CleanBlog\Clea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstateAgency", "EstateAgency\EstateAgency.csproj", "{3FC5ECBC-D455-45A0-B21F-77998D929E20}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitPixelClasses", "GitPixelClasses", "{051382AD-1B57-498B-8732-B4E47F2FF07B}"
-	ProjectSection(SolutionItems) = preProject
-		PixelClasses\README.md = PixelClasses\README.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustPraktice", "JustPraktice\JustPraktice.csproj", "{AEA3942C-8E35-4017-97C4-ACA7D56B592E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +77,10 @@ Global
 		{3FC5ECBC-D455-45A0-B21F-77998D929E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FC5ECBC-D455-45A0-B21F-77998D929E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FC5ECBC-D455-45A0-B21F-77998D929E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEA3942C-8E35-4017-97C4-ACA7D56B592E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEA3942C-8E35-4017-97C4-ACA7D56B592E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEA3942C-8E35-4017-97C4-ACA7D56B592E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEA3942C-8E35-4017-97C4-ACA7D56B592E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

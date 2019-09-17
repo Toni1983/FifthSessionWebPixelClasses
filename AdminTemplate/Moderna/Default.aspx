@@ -7,9 +7,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphTopText" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContent" runat="server">
-    <body>
-        <div id="wrapper">
 
+    <form id="form1" runat="server">
+        <div id="wrapper">
             <section id="featured">
                 <!-- start slider -->
                 <div class="container">
@@ -76,101 +76,21 @@
                                             <div class="icon">
                                                 <i class="fa fa-desktop fa-3x"></i>
                                                 <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
-                                                    <alternatingitemtemplate>
-                                                        <tr style="background-color: #FAFAD2;color: #284775;">
-                                                            <td>
-                                                                <asp:Label ID="CountryNameLabel" runat="server" Text='<%# Eval("CountryName") %>' />
-                                                            </td>
-                                                            <td>
-                                                                <asp:Label ID="CountryDialCodeLabel" runat="server" Text='<%# Eval("CountryDialCode") %>' />
-                                                            </td>
-                                                        </tr>
-                                                    </alternatingitemtemplate>
-                                                    <edititemtemplate>
-                                                        <tr style="background-color: #FFCC66;color: #000080;">
-                                                            <td>
-                                                                <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                                                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                                                            </td>
-                                                            <td>
-                                                                <asp:TextBox ID="CountryNameTextBox" runat="server" Text='<%# Bind("CountryName") %>' />
-                                                            </td>
-                                                            <td>
-                                                                <asp:TextBox ID="CountryDialCodeTextBox" runat="server" Text='<%# Bind("CountryDialCode") %>' />
-                                                            </td>
-                                                        </tr>
-                                                    </edititemtemplate>
-                                                    <emptydatatemplate>
-                                                        <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
-                                                            <tr>
-                                                                <td>No data was returned.</td>
-                                                            </tr>
-                                                        </table>
-                                                    </emptydatatemplate>
-                                                    <insertitemtemplate>
-                                                        <tr style="">
-                                                            <td>
-                                                                <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
-                                                                <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                                                            </td>
-                                                            <td>
-                                                                <asp:TextBox ID="CountryNameTextBox" runat="server" Text='<%# Bind("CountryName") %>' />
-                                                            </td>
-                                                            <td>
-                                                                <asp:TextBox ID="CountryDialCodeTextBox" runat="server" Text='<%# Bind("CountryDialCode") %>' />
-                                                            </td>
-                                                        </tr>
-                                                    </insertitemtemplate>
-                                                    <itemtemplate>
-                                                        <tr style="background-color: #FFFBD6;color: #333333;">
-                                                            <td>
-                                                                <asp:Label ID="CountryNameLabel" runat="server" Text='<%# Eval("CountryName") %>' />
-                                                            </td>
-                                                            <td>
-                                                                <asp:Label ID="CountryDialCodeLabel" runat="server" Text='<%# Eval("CountryDialCode") %>' />
-                                                            </td>
-                                                        </tr>
-                                                    </itemtemplate>
-                                                    <layouttemplate>
-                                                        <table runat="server">
-                                                            <tr runat="server">
-                                                                <td runat="server">
-                                                                    <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                                                        <tr runat="server" style="background-color: #FFFBD6;color: #333333;">
-                                                                            <th runat="server">CountryName</th>
-                                                                            <th runat="server">CountryDialCode</th>
-                                                                        </tr>
-                                                                        <tr id="itemPlaceholder" runat="server">
-                                                                        </tr>
-                                                                    </table>
-                                                                </td>
-                                                            </tr>
-                                                            <tr runat="server">
-                                                                <td runat="server" style="text-align: center;background-color: #FFCC66;font-family: Verdana, Arial, Helvetica, sans-serif;color: #333333;">
-                                                                    <asp:DataPager ID="DataPager1" runat="server">
-                                                                        <Fields>
-                                                                            <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                                                                            <asp:NumericPagerField />
-                                                                            <asp:NextPreviousPagerField ButtonType="Button" ShowLastPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
-                                                                        </Fields>
-                                                                    </asp:DataPager>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </layouttemplate>
-                                                    <selecteditemtemplate>
-                                                        <tr style="background-color: #FFCC66;font-weight: bold;color: #000080;">
-                                                            <td>
-                                                                <asp:Label ID="CountryNameLabel" runat="server" Text='<%# Eval("CountryName") %>' />
-                                                            </td>
-                                                            <td>
-                                                                <asp:Label ID="CountryDialCodeLabel" runat="server" Text='<%# Eval("CountryDialCode") %>' />
-                                                            </td>
-                                                        </tr>
-                                                    </selecteditemtemplate>
+                                                   <ItemTemplate>
+                                                       <table>
+                                                           <tr>
+                                                               <td>
+                                                                   <asp:Button ID="btnCountry" OnClick="btnCountry_Click" runat="server" Text='<%# Eval("CountryName") %>'></asp:Button>
+                                                               </td>
+                                                               <td>
+                                                                   <asp:Label ID="lblDialcode" runat="server" Text='<%# Eval("CountryDialCode") %>'></asp:Label>
+                                                               </td>
+                                                           </tr>
+                                                       </table>
+                                                   </ItemTemplate>
                                                 </asp:ListView>
-                                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CountriesConnectionString %>" SelectCommand="SELECT [CountryName], [CountryDialCode] FROM [Countries]"></asp:SqlDataSource>
                                             </div>
+                                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CountriesConnectionString3 %>" SelectCommand="SELECT [CountryName], [CountryDialCode] FROM [Countries]"></asp:SqlDataSource>
                                             <asp:TextBox ID="txtCountry" runat="server"></asp:TextBox>
                                             <asp:TextBox ID="txtDialcode" runat="server"></asp:TextBox>
 
@@ -191,7 +111,7 @@
                                                         <table style="border: 1px solid">
                                                             <tr style="width: 100px">
                                                                 <td>
-                                                                    <asp:Button ID="BtnCountry" runat="server" Text='<%# Eval("CountryName") %>' />
+                                                                    <asp:Button ID="BtnCountry" OnClick="BtnCountry_Click" runat="server" Text='<%# Eval("CountryName") %>' />
                                                                 </td>
                                                                 <td>
                                                                     <asp:Label ID="lblDialcode" runat="server" Text='<%# Eval("CountryDialCode") %>' />
@@ -224,7 +144,7 @@
                                                         <asp:BoundField DataField="AuthorId" HeaderText="AuthorId" SortExpression="AuthorId" />
                                                     </Columns>
                                                 </asp:GridView>
-                                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:LibraryConnectionString %>" SelectCommand="SELECT [Name], [AuthorId] FROM [Books]"></asp:SqlDataSource>
+                                                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:LibraryConnectionString2 %>" SelectCommand="SELECT [Name], [AuthorId] FROM [Books]"></asp:SqlDataSource>
                                             </div>
                                             <p>
                                                 Voluptatem accusantium doloremque laudantium sprea totam rem aperiam.
@@ -423,6 +343,6 @@
         <script src="/Moderna/Content/js/jquery.flexslider.js"></script>
         <script src="/Moderna/Content/js/animate.js"></script>
         <script src="/Moderna/Content/js/custom.js"></script>
+    </form>
 
-    </body>
 </asp:Content>

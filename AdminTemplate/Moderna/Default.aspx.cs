@@ -12,15 +12,25 @@ namespace AdminTemplate.Moderna
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
-
+        CountriesEntities db = new CountriesEntities();
         protected void BtnCountry_Click(object sender, EventArgs e)
         {
-            CountriesEntities db = new CountriesEntities();
-            var country = db.Countries.FirstOrDefault(x => x.CountryName == ListView1.SelectedValue.ToString());
+            
+            //foreach (var item in Repeater1.Items)
+            //{
+                
+            //    
+            //}
+            
+        }
+        protected void btnCountry_Click(object sender, EventArgs e)
+        {
+            var country = db.Countries.FirstOrDefault(x => x.CountryName == ListView1.DataKeyNames.ToString());
             txtCountry.Text = country.CountryName;
         }
-        
+
+
     }
 }

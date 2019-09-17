@@ -67,13 +67,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AnotherListviewTest.aspx" />
     <Content Include="Global.asax" />
     <Content Include="StyleSheet.css" />
     <Content Include="TestingGridView.aspx" />
     <Content Include="TestingListView.aspx" />
+    <Content Include="UcTemplates\UcListview.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnotherListviewTest.aspx.cs">
+      <DependentUpon>AnotherListviewTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnotherListviewTest.aspx.designer.cs">
+      <DependentUpon>AnotherListviewTest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -98,6 +107,13 @@
     </Compile>
     <Compile Include="TestingListView.aspx.designer.cs">
       <DependentUpon>TestingListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UcTemplates\UcListview.ascx.cs">
+      <DependentUpon>UcListview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UcTemplates\UcListview.ascx.designer.cs">
+      <DependentUpon>UcListview.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

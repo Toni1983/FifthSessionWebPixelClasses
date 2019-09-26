@@ -25,8 +25,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanBlog", "CleanBlog\Clea
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstateAgency", "EstateAgency\EstateAgency.csproj", "{3FC5ECBC-D455-45A0-B21F-77998D929E20}"
 EndProject
+<<<<<<< Updated upstream
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustPraktice", "JustPraktice\JustPraktice.csproj", "{AEA3942C-8E35-4017-97C4-ACA7D56B592E}"
 EndProject
+=======
+>>>>>>> Stashed changes
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

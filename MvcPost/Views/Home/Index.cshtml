@@ -1,0 +1,54 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Text
+        <br />
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td>User Name: </td>
+                    <td><input type="text" name="userName" /></td>
+                </tr>
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name="password" /></td>
+                </tr>
+                <tr>
+                    <td>User Name: </td>
+                    <td><input type="submit" value="Login" /></td>
+                </tr>
+            </table>
+        }
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td>Number 1: </td>
+                    <td><input type="number" name="number1" /></td>
+                </tr>
+                <tr>
+                    <td>Number 2: </td>
+                    <td><input type="number" name="number2" /></td>
+                </tr>
+                <tr>
+                    <td>User Name: </td>
+                    <td><input type="submit" value="Calculate" /></td>
+                </tr>
+            </table>
+        }
+        @ViewBag.Result
+    </div>
+</body>
+</html>

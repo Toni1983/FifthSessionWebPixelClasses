@@ -1,0 +1,11 @@
+﻿@model HomeworkClassSystem.Models.Students
+@{
+    ViewBag.Title = "PersonalPage";
+}
+
+@Model.StudentName <br />
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.StudentName)
+}

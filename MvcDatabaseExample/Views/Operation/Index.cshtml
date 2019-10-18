@@ -1,0 +1,25 @@
+﻿@model List<MvcDatabaseExample.Models.Operations>
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.ActionLink("Create", "Create", "Operation")
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Result</td>
+        <td>Register Date</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td> @item.Name   </td>
+    <td> @item.Result   </td>
+    <td>  @item.RegisterDate  </td>
+    <td> @Html.ActionLink("Detail", "Detail", "Operation", new { id = item.OperationId }, null)</td>
+    <td> @Html.ActionLink("Edit", "Edit", "Operation", new { id = item.OperationId }, null)</td>
+    <td> @Html.ActionLink("Delete", "Delete", "Operation", new { id = item.OperationId }, null)</td>
+</tr>
+    }
+
+</table>

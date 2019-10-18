@@ -1,0 +1,15 @@
+﻿@model HomeworkClassSystem.Models.Students
+@{
+    ViewBag.Title = "PersonalPageMaster";
+}
+
+@Model.StudentName <br />
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.StudentId)
+    @Html.TextBoxFor(model => model.Tasks) <br />
+    @Html.TextBoxFor(model => model.StudentName)<br />
+    <input type="submit" value="Add" />
+}
+

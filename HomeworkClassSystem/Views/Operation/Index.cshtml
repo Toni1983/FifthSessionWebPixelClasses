@@ -1,0 +1,38 @@
+﻿@model List<HomeworkClassSystem.Models.Students>
+@{
+    ViewBag.Title = "Index";
+}
+
+<table>
+    <tr>
+        <td>Name</td>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.StudentName  </td>
+        </tr>
+    }
+</table>
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Student Name: </td>
+            <td><input type="text" name="StudentName" /></td>
+        </tr>
+        <tr>
+            <td>Password: </td>
+            <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+            <td><input type="hidden" name="id" /></td>
+        </tr>
+        <tr>
+            <td>Login</td>
+            <td><input type="submit" value="Login" /></td>
+        </tr>
+    </table>
+    @ViewBag.Incorrect
+}

@@ -1,0 +1,18 @@
+﻿@model MvcDatabaseExample.Models.Operations
+@{
+    ViewBag.Title = "Delete";
+}
+
+@Model.Name <br />
+@Model.Result <br />
+@Model.RegisterDate
+
+@using (Html.BeginForm())
+{
+
+
+    @Html.HiddenFor(model => model.OperationId)
+    @*@Html.Hidden("id")*@
+    <input type="submit" value="Delete" />
+}
+
